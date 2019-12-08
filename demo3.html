@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝移动端等分布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color:#000000;
+        }
+        img{
+            width:60px;
+
+        }
+        .wrap,.row {
+            display: flex;
+            justify-content:space-around;
+        }
+        .wrap {
+            flex-direction: column;
+        }
+        .box{
+            flex-basis:0;
+            flex-grow:1;
+        }
+        .box a{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="row">
+        <div class="box"><a href="javascript:;"><img src="img/1.png" alt=""><span>天猫新品</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/2.png" alt=""><span>今日爆款</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/3.png" alt=""><span>天猫国际</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/4.png" alt=""><span>饿了么</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/5.png" alt=""><span>天猫超市</span></a></div>
+    </div>
+    <div class="row">
+        <div class="box"><a href="javascript:;"><img src="img/6.png" alt=""><span>充值中心</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/7.png" alt=""><span>机票酒店</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/8.png" alt=""><span>金币庄园</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/9.png" alt=""><span>阿里拍卖</span></a></div>
+        <div class="box"><a href="javascript:;"><img src="img/10.png" alt=""><span>淘宝吃货</span></a></div>
+    </div>
+</div>
+</body>
+</html>

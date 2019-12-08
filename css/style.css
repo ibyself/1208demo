@@ -1,0 +1,30 @@
+body {
+  background-color: #c7edcc;
+}
+.box {
+  width: 500px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+}
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  z-index: -2;
+}
+.box::before {
+  transform: skew(-12deg) rotate(-4deg);
+  left: 26px;
+  right: 26px;
+}
+.box::after {
+  transform: skew(12deg) rotate(4deg);
+  left: 26px;
+  right: 26px;
+}
+/*# sourceMappingURL=style.css.map */

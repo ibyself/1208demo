@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex练习骰子</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width:600px;
+            height:200px;
+            margin:200px auto 0;
+            background-color:#ddd;
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+        }
+        .wrap > div{
+            width:80px;
+            height:80px;
+            border:1px solid #000;
+            border-radius:20px;
+        }
+        .box1{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .b{
+            width:16px;
+            height:16px;
+            border-radius:50%;
+            background-color:#000;
+        }
+        .box2,.box3{
+            display:flex;
+            justify-content:space-around;
+        }
+        .box2 >div{
+            margin:10px 0;
+        }
+        .box2 .b2{
+            align-self:flex-end;
+        }
+
+        .box3 >div{
+            margin:6px 0;
+        }
+        .box3 .b2{
+            align-self:center;
+        }
+        .box3 .b3{
+            align-self:flex-end;
+        }
+        .box4,.box5,.box6{
+            display: flex;
+            flex-direction:column;
+            justify-content:space-around;
+        }
+        .box4 .top,.box4 .bottom,.box5 .top,.box5 .middle,.box5 .bottom,.box6 .top,.box6 .middle,.box6 .bottom{
+            display:flex;
+            justify-content:space-around;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1">
+            <div class="b b1"></div>
+        </div>
+        <div class="box2">
+            <div class="b b1"></div>
+            <div class="b b2"></div>
+        </div>
+        <div class="box3">
+            <div class="b b1"></div>
+            <div class="b b2"></div>
+            <div class="b b3"></div>
+        </div>
+        <div class="box4">
+            <div class="top">
+                <div class="b b1"></div>
+                <div class="b b2"></div>
+            </div>
+            <div class="bottom">
+                <div class="b b3"></div>
+                <div class="b b4"></div>
+            </div>
+        </div>
+        <div class="box5">
+            <div class="top">
+                <div class="b b1"></div>
+                <div class="b b2"></div>
+            </div>
+            <div class="middle">
+                <div class="b b3"></div>
+            </div>
+            <div class="bottom">
+                <div class="b b4"></div>
+                <div class="b b5"></div>
+            </div>
+
+        </div>
+        <div class="box6">
+            <div class="top">
+                <div class="b b1"></div>
+                <div class="b b2"></div>
+            </div>
+            <div class="middle">
+                <div class="b b3"></div>
+                <div class="b b4"></div>
+            </div>
+            <div class="bottom">
+                <div class="b b5"></div>
+                <div class="b b6"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

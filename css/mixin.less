@@ -1,0 +1,70 @@
+//居中对齐
+.juzhong(@w,@h,@bg){
+  width:@w;
+  height:@h;
+  background:@bg;
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+}
+//垂直对齐
+.ver-m(@h){
+  height:@h;
+  line-height:@h;
+}
+//溢出显示...
+.ellipsis(){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+//隐藏的盒子
+.hightbox(@c,@w){
+  .@{c}{
+    width:@w;
+    overflow:hidden;
+    border:1px solid #000;
+    .hightbox{
+      width:@w+200px;
+      .item{
+        float:left;
+        width:300px;
+        height:400px;
+        background:skyblue;
+        margin-right: 50px;
+        margin-bottom:20px;
+      }
+    }
+  }
+}
+//翘边阴影
+.box-shadow(@w,@h,@c){
+  .@{c}{
+    width:@w;
+    height:@h;
+    background:#fff;
+    box-shadow:0 1px 4px rgba(0,0,0,.3),0 0 40px rgba(0,0,0,.1) inset;
+    position:relative;
+    &::before,&::after{
+      content:'';
+      position:absolute;
+      top:20px;
+      bottom:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,.7);
+      z-index:-2;
+    }
+    &::before{
+      transform:skew(-12deg) rotate(-4deg);
+      left:26px;
+      right:26px;
+    }
+    &::after{
+      transform:skew(12deg) rotate(4deg);
+      left:26px;
+      right:26px;
+    }
+  }
+}

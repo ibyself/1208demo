@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  width: 300px;
+  background: skyblue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 300px;
+  line-height: 300px;
+}
+.wrap .box1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=index.css.map */
